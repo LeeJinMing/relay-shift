@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b1d">
+  <title>Relay Shift</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./game.mjs"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Relay Shift</h1>
+      <nav id="routes" aria-label="Choose a route"></nav>
+    </header>
+
+    <section class="machine" aria-label="Dispatch console">
+      <div class="machine-header">
+        <div>
+          <p class="label">Delivery route</p>
+          <h2 id="route-name"></h2>
+        </div>
+        <div class="budget">
+          <p class="label">Shifts left</p>
+          <output id="moves"></output>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div id="lanes" class="lanes" aria-hidden="true"></div>
+        <div id="board" class="board" role="group" aria-label="Conveyor belts"></div>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div class="controls">
+        <button id="left" type="button"><span aria-hidden="true">←</span> Shift left</button>
+        <button id="right" type="button">Shift right <span aria-hidden="true">→</span></button>
+        <button id="advance" class="dispatch" type="button">Dispatch</button>
+        <button id="next" class="dispatch" type="button" hidden>Next route</button>
+      </div>
+      <p class="hint">Shift the active belt until your cart has an open lane. Arrow tiles steer it into the next lane.</p>
+      <footer>
+        <button id="restart" class="quiet" type="button">Restart route</button>
+        <span class="keys"><kbd>←</kbd> <kbd>→</kbd> Shift <kbd>Enter</kbd> Dispatch</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
