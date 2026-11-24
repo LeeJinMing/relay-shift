@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-24",
+  "tool": "OpenAI ImageGen in Codex",
+  "inputs": [
+    {
+      "output": "routes.png",
+      "id": "exec-42a99271-3ff0-4d48-9c27-6f6e086b1aaa",
+      "reference": null,
+      "prompt": "Production game key artwork sheet for original industrial conveyor puzzle RELAY SHIFT. A TALL POSTER SHEET containing EXACTLY THREE different full-bleed wide illustrations, stacked vertically. Each horizontal illustration spans entire width and EXACTLY ONE THIRD of height. Straight hard cuts at 1/3 and 2/3. No margin, no dividing white lines, no typography or numbers or logos anywhere. Each panel is a striking mid-century freight railway travel poster, premium crisp angular screen printed editorial illustration, geometrically designed machines, flat block colors with subtle paper grain, strong deep midnight blue outlines and shadows, cream highlights, bold vermilion signal-orange and dusky turquoise highlights. Perspective and graphic composition suggest speed. All three feature the same iconic little streamlined safety-orange autonomous industrial rail cart on four dark wheels with a bright cream rectangular strapped parcel on its load bed, no face, no driver. TOP PANEL Dawn loading depot: hero orange package cart large lower center in three-quarter view facing left front, broad dark blue rails leading diagonally, a vast mint sky, thin overhead warehouse trusses, dark navy gantry silhouettes and red-orange sunrise disc. MIDDLE PANEL Canal junction at midday: wide industrial turning basin, bigger angular red-orange overhead cranes, layered teal cargo containers, one small hero cart beside an intersecting automated conveyance lower middle, reflective pale peach sky and deep teal water. BOTTOM PANEL Midnight sorting terminal: indigo night, warm saffron windows and sharp moon, overhead trusses with tiny industrial lamps, hero orange parcel cart lit on its approach below, rich striking cobalt geometric shadows. Distinct silhouettes, clean focus, good separation at small size. Museum-quality original illustrated poster plates, no words, no faux lettering, no UI, no borders, no collage within each panel, no cut-off cart."
+    },
+    {
+      "output": "cart.png",
+      "id": "exec-f164400e-7cf5-4bcd-8ffe-31568ae35301",
+      "reference": "routes.png",
+      "prompt": "Use the parcel cart in the reference poster as design source. Produce one independent high-legibility isolated GAME PIECE of that cart on a genuinely transparent background. A single squat compact orange autonomous four-wheeled delivery trolley with one cream parcel secured by TWO dark navy straps. Elevated 3/4 FRONT view so we see the front and top, nose angled just slightly toward viewer's lower left. Warm almond parcel, orange nose, two ivory horizontal headlamps, deep navy wheels and outline. Big silhouette, elegantly simplified mid-century industrial print illustration. Very restrained coarse grain, strong design, read at 42px. Center the COMPLETE vehicle, with generous padding on every side. No other objects, no ground plane, no rail, no drop-shadow outside silhouette, no typography, no background, no border."
+    }
+  ]
+}

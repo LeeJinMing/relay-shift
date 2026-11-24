@@ -2,50 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101b1d">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#112e39">
   <title>Relay Shift</title>
+  <link rel="icon" type="image/webp" href="./assets/cart.webp">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./game.mjs"></script>
 </head>
 <body>
+  <header class="mast"><div class="mast-in">
+    <h1><i class="freight-mark" aria-hidden="true"></i>Relay Shift</h1>
+    <nav id="routes" aria-label="Delivery routes"></nav>
+    <div class="utilities"><button type="button" id="sound" aria-pressed="true">Sound on</button><button type="button" id="help" aria-label="How to play">?</button></div>
+  </div></header>
   <main>
-    <header>
-      <h1>Relay Shift</h1>
-      <nav id="routes" aria-label="Choose a route"></nav>
-    </header>
-
-    <section class="machine" aria-label="Dispatch console">
-      <div class="machine-header">
-        <div>
-          <p class="label">Delivery route</p>
-          <h2 id="route-name"></h2>
-        </div>
-        <div class="budget">
-          <p class="label">Shifts left</p>
-          <output id="moves"></output>
-        </div>
+    <section class="manifest" aria-labelledby="route-name">
+      <div class="hero"><img id="art" alt="" src="./assets/depot.webp"></div>
+      <div class="waybill"><p class="eyebrow" id="route-number">Route 01 / 03</p><h2 id="route-name">First delivery</h2>
+        <p id="brief"></p></div>
+      <div class="ledger"><h3>Delivery progress</h3><ol id="stamps" aria-label="Completed belts"></ol></div>
+    </section>
+    <section class="console" aria-labelledby="console-title">
+      <div class="desk-head"><div><p class="eyebrow" id="belt-count"></p><h2 id="console-title">Conveyor desk</h2></div>
+        <div class="counter"><strong id="moves">4</strong><span>shifts<br>left</span></div></div>
+      <div id="machine" tabindex="0" role="group" aria-label="Conveyor desk. Left and right shift the active belt. Enter dispatches.">
+        <div class="lane-labels"><span aria-hidden="true">LN</span><div id="lanes"></div></div>
+        <div id="tracks"></div>
+        <div class="dock" id="dock"><span>Receiving dock</span><i aria-hidden="true"></i></div>
+        <img id="cart" src="./assets/cart.webp" alt="" draggable="false">
       </div>
-
-      <div class="board-wrap">
-        <div id="lanes" class="lanes" aria-hidden="true"></div>
-        <div id="board" class="board" role="group" aria-label="Conveyor belts"></div>
-      </div>
-
-      <p id="status" class="status" role="status" aria-live="polite"></p>
-
-      <div class="controls">
-        <button id="left" type="button"><span aria-hidden="true">←</span> Shift left</button>
-        <button id="right" type="button">Shift right <span aria-hidden="true">→</span></button>
-        <button id="advance" class="dispatch" type="button">Dispatch</button>
-        <button id="next" class="dispatch" type="button" hidden>Next route</button>
-      </div>
-      <p class="hint">Shift the active belt until your cart has an open lane. Arrow tiles steer it into the next lane.</p>
-      <footer>
-        <button id="restart" class="quiet" type="button">Restart route</button>
-        <span class="keys"><kbd>←</kbd> <kbd>→</kbd> Shift <kbd>Enter</kbd> Dispatch</span>
-      </footer>
+      <div class="readout" id="readout" role="status" aria-live="polite" aria-atomic="true"><span id="signal" aria-hidden="true"></span><div><strong id="status"></strong><p id="detail"></p></div></div>
+      <div class="controls"><button type="button" id="left"><b aria-hidden="true">←</b>Shift left</button><button type="button" id="right">Shift right<b aria-hidden="true">→</b></button><button type="button" id="advance">Dispatch <b aria-hidden="true">↓</b></button><button type="button" id="next" hidden>Next route <b aria-hidden="true">→</b></button><button type="button" id="retry" hidden>Try again <b aria-hidden="true">↺</b></button></div>
+      <footer><button type="button" id="restart">↺ Restart route</button><span><kbd>←</kbd> <kbd>→</kbd> Shift &nbsp; <kbd>Enter</kbd> Dispatch</span></footer>
     </section>
   </main>
-</body>
-</html>
+  <dialog id="guide" aria-labelledby="guide-title"><form method="dialog"><button class="close" aria-label="Close instructions">×</button><p class="eyebrow">Operator guide</p><h2 id="guide-title">How to play</h2>
+    <p>Line up a gate under the cart, then dispatch it through every conveyor belt.</p>
+    <ul><li><b>Shift</b> rotates the active belt by one lane and uses one shift. Tiles wrap around either end.</li><li><b>Dispatch</b> crosses an open gate for free. A side arrow moves the cart one lane left or right on the next belt, wrapping at the edges.</li><li><b>On touch</b>, use the buttons or swipe across the active belt. Tap the active belt under the cart to dispatch.</li></ul>
+    <p>Use <kbd>←</kbd> <kbd>→</kbd> to shift, <kbd>Enter</kbd> to dispatch on the desk, and <kbd>R</kbd> to restart. Tab reaches every button. Sound can be muted in the header.</p><button class="primary">Back to the desk</button>
+  </form></dialog>
+</body></html>
+

@@ -1,0 +1,70 @@
+[
+  {
+    "file": "assets/depot.webp",
+    "source": "art-source/routes.png",
+    "source_sha256": "9fe64d96c15dc85cafa74a317e32516c4e6b6905d00693eb5fdfcbc99b9902f2",
+    "sha256": "90196c01038930168b95a19e0140e8d13f58360b498f93d7dd48dfc4d8844906",
+    "size": [
+      960,
+      470
+    ],
+    "crop": [
+      0,
+      0,
+      1024,
+      523
+    ],
+    "role": "Dawn loading depot"
+  },
+  {
+    "file": "assets/junction.webp",
+    "source": "art-source/routes.png",
+    "source_sha256": "9fe64d96c15dc85cafa74a317e32516c4e6b6905d00693eb5fdfcbc99b9902f2",
+    "sha256": "d6f345a9370f9b5d092cd3384efa8a023f79ea28ae88bd7137e26b2c71a806c5",
+    "size": [
+      960,
+      470
+    ],
+    "crop": [
+      0,
+      525,
+      1024,
+      1033
+    ],
+    "role": "Canal junction"
+  },
+  {
+    "file": "assets/terminal.webp",
+    "source": "art-source/routes.png",
+    "source_sha256": "9fe64d96c15dc85cafa74a317e32516c4e6b6905d00693eb5fdfcbc99b9902f2",
+    "sha256": "d97bebfb9dc8dabb183652b212fa781eb5e3d59a71268fa972c153e71ad4a73a",
+    "size": [
+      960,
+      470
+    ],
+    "crop": [
+      0,
+      1036,
+      1024,
+      1536
+    ],
+    "role": "Night sorting terminal"
+  },
+  {
+    "file": "assets/cart.webp",
+    "source": "art-source/cart.png",
+    "source_sha256": "99528416944893a663b3a46fac171f7fe8f080b4c6b85255c254b1f6f99f15cf",
+    "sha256": "43f9280dd1a8453abbdafa8480d0051320938360dec288b21f1e88dc92695b5b",
+    "size": [
+      240,
+      180
+    ],
+    "crop": [
+      158,
+      89,
+      1348,
+      983
+    ],
+    "role": "Playable parcel cart and game icon"
+  }
+]
